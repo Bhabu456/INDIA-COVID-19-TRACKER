@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: ghostwhite;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.half {
+  margin-right: 40px;
+  margin-left: 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.half:last-child {
+  margin-left: 0;
+  flex-grow: 1;
+}
+
+.header {
+  padding-bottom: 16px;
+}
+
+.chart-container {
+  height: 300px;
+  margin-bottom: 32px;
+}
+
+.donut-container {
+  width: 350px;
+  height: 300px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.confirmed-chart-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  flex-direction: column;
+}
+
+#chartConfirmedText {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.table-container,
+.chart-container,
+.map-container {
+  border-radius: 12px;
+  background-color: white;
+}
+
+.table-container {
+  overflow: auto;
+  height: calc(100% - 425px);
+}
+
+.map-container {
+  height: 800px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: white;
+  color: orange;
+}
+
+tbody tr:hover {
+  background: gray;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 12px;
+}
+
+.card {
+  font-weight: 700;
+  width: 150px;
+  padding: 12px;
+  margin-right: 12px;
+  border-radius: 12px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card-confirmed {
+  color: #ff0000;
+  background-color: #ff000050;
+}
+
+.card-active {
+  color: #0000ff;
+  background-color: #0000ff50;
+}
+
+.card-recovered {
+  color: #00aa00;
+  background-color: #00aa0050;
+}
+
+.card-deceased {
+  color: #a9a9a9;
+  background-color: #a9a9a950;
+}
+
+.updated-time {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  align-items: end;
+  color: green;
+}

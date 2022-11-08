@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>India Covid Tracker</title>
+    <meta charset="UTF-8" />
+    <link href="./styles.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="half">
+        <div class="header">
+          <h2>INDIA COVID-19 TRACKER</h2>
+          <span>
+            Let's all pray to make our Earth Covid-19 free soon, Stay safe and
+            do TheLocate
+          </span>
+        </div>
+        <div class="chart-container">
+          <div class="donut-container">
+            <div class="confirmed-chart-box">
+              <div id="chartConfirmedText"></div>
+              <div style="color: grey;">CONFIRMED</div>
+            </div>
+              <canvas id="donutChart"></canvas>
+          </div>
+          
+        </div>
+        <div class="table-container">
+          <table id="covidTable">
+            <thead>
+              <th>STATE/UT</th>
+              <th>CONFIRMED</th>
+              <th>ACTIVE</th>
+              <th>RECOVERED</th>
+              <th>DECEASED</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="half">
+        <div class="header">
+          <h2>INDIA MAP</h2>
+          <sapn>
+            Hover over a state for more details
+          </span>
+        </div>
+        <div class="map-container">
+          <div class="cards">
+            <div class="card card-confirmed">
+              <h5>CONFIRMED</h5>
+              <span></span>
+            </div>
+            <div class="card card-active">
+              <h5>ACTIVE</h5>
+              <span></span>
+            </div>
+            <div class="card card-recovered">
+              <h5>RECOVERED</h5>
+              <span></span>
+            </div>
+            <div class="card card-deceased">
+              <h5>DECEASED</h5>
+              <span></span>
+            </div>
+          </div>
+          <div class="updated-time">
+            <span>LAST UPDATED</span>
+            <span id="lastUpdated"></span>
+          </div>
+          <div class="map"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
